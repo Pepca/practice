@@ -1,0 +1,29 @@
+:root {
+  --base-default-color: 0, 0%;
+  --base-orange-color: 30, 100%;
+  --base-green-color: 106, 43%;
+
+  --black-color-hsl: hsl(var(--base-default-color), 0%);
+  --white-color-hsl: hsl(var(--base-default-color), 100%);
+  --secondary-white-color-hsl: hsl(var(--base-default-color), 98%);
+  --orange-color-hsl: hsl(var(--base-orange-color), 55%);
+  --gray-color-hsl: hsl(var(--base-default-color), 48%);
+  --primary-black-color-hsl: hsl(var(--base-default-color), 18%);
+  --secondary-black-color-hsl: hsl(var(--base-default-color), 15%);
+  --green-color-hsl: hsl(var(--base-green-color), 55%);
+
+  --max-width: 1920;
+
+  --container-width: 1175px;
+  --container-padding: 15px;
+  --max-width-container: calc(
+    var(--container-width) + var(--container-padding) * 2
+  );
+
+  --default-font-family: 'Open Sans', sans-serif;
+  --default-font-size: 15px;
+  --default-font-weight: 400;
+  --default-font-style: normal;
+
+  --oswald-font-family: 'Oswald', sans-serif;
+}

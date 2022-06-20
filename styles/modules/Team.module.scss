@@ -1,0 +1,120 @@
+.team {
+  padding: 130px 0 150px;
+  &__inner {
+  }
+
+  &__title {
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 40px;
+
+    margin-top: 70px;
+  }
+
+  &Item {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: hsl(var(--base-default-color), 90%);
+
+    flex: 0 1 calc(100% / 3);
+
+    height: 500px;
+
+    border-radius: 6px;
+
+    overflow: hidden;
+
+    box-shadow: 0 0 10px rgba(#000, 0.1);
+
+    @media screen and (min-width: 991.98px) {
+      &:hover {
+        .teamItemInfo {
+          bottom: 0;
+        }
+      }
+    }
+
+    &:focus {
+      outline: none;
+      
+      .teamItemInfo {
+        bottom: 0;
+      }
+    }
+
+    &__bg {
+    }
+
+    &Info {
+      --gap-value: 20px;
+      --padding-bottom-value: 30px;
+      --after-element-height-value: 2px;
+
+      position: absolute;
+      bottom: calc(
+        0px - var(--padding-bottom-value) - var(--gap-value) -
+          var(--after-element-height-value) - var(--text-height-value)
+      );
+      left: 0;
+
+      width: 100%;
+
+      text-align: center;
+
+      display: flex;
+      flex-direction: column;
+
+      gap: var(--gap-value);
+
+      padding: 20px 20px var(--padding-bottom-value);
+
+      background-color: rgba(white, 0.8);
+
+      transition: bottom 0.5s ease;
+
+      &__title {
+        position: relative;
+
+        font-family: var(--oswald-font-family);
+        font-weight: 300;
+        font-size: 25px;
+
+        color: var(--primary-black-color-hsl);
+
+        text-transform: uppercase;
+
+        padding-bottom: 25px;
+
+        &:after {
+          content: '';
+
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+
+          transform: translate(-50%, 0);
+
+          width: 45px;
+          height: var(--after-element-height-value);
+
+          background-color: var(--primary-black-color-hsl);
+        }
+      }
+      &__text {
+        font-size: 18px;
+        line-height: 25px;
+
+        color: hsl(var(--base-default-color), 48%);
+      }
+    }
+  }
+}

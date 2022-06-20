@@ -1,0 +1,156 @@
+.intro {
+  position: relative;
+
+  width: 100%;
+  height: 100vh;
+
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 15%,
+    rgba(0, 0, 0, 0.6755077030812324) 50%,
+    rgba(0, 0, 0, 1) 100%
+  );
+
+  overflow: hidden;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+  }
+
+  &Info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 25px;
+
+    flex: 0 1 50%;
+
+    color: var(--white-color-hsl);
+
+    text-align: center;
+
+    &__title {
+      font-family: var(--oswald-font-family);
+      font-weight: 500;
+      font-size: 72px;
+    }
+
+    &__subtitle {
+      font-size: 20px;
+    }
+  }
+
+  &Slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    &__container {
+      position: relative;
+
+      width: 100vw;
+      height: 100vh;
+
+      overflow: hidden;
+
+      background-color: var(--primary-black-color-hsl);
+    }
+
+    &__item {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 100vw;
+      height: 100vh;
+
+      opacity: 0;
+      visibility: hidden;
+
+      transition: opacity 1s ease, visibility 1s ease;
+
+      &._active {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: grayscale(100%);
+      }
+    }
+  }
+
+  &Dots {
+    display: flex;
+    align-items: flex;
+
+    flex: 0 1 40%;
+
+    &__list {
+      display: flex;
+      align-items: flex-end;
+
+      gap: 20px;
+    }
+
+    &__item {
+      cursor: pointer;
+      position: relative;
+
+      font-family: var(--oswald-font-family);
+      font-weight: 700;
+      font-size: 20px;
+
+      color: var(--white-color-hsl);
+      opacity: 0.5;
+
+      transition: opacity 0.3s ease, transform 0.3s ease;
+
+      &::after {
+        content: '';
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        width: 100%;
+        height: 1px;
+
+        background-color: var(--orange-color-hsl);
+
+        opacity: 0;
+        visibility: hidden;
+
+        transform: translate(-50%, -50%);
+
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+      }
+
+      &._active {
+        opacity: 1;
+
+        transform: scale(2);
+
+        &::after {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+  }
+}
+
+._active {
+}

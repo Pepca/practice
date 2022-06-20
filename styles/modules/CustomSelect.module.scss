@@ -1,0 +1,126 @@
+.customSelect {
+  width: 100%;
+  height: 100%;
+
+  input {
+    display: none;
+  }
+
+  &__title {
+    font-size: 18px;
+  }
+
+  &Element {
+    margin-top: 15px;
+    position: relative;
+
+    &Head {
+      cursor: pointer;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 15px;
+
+      padding: 10px 15px;
+
+      font-size: 20px;
+
+      border: 1px solid rgba(black, 0.5);
+      border-radius: 6px;
+
+      transition: border-radius 0.3s ease;
+
+      ._selectOpen & {
+        border-radius: 6px 6px 0 0;
+      }
+
+      &__value {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      &__icon {
+        width: 20px;
+        height: 20px;
+
+        transition: transform 0.3s ease;
+
+        ._selectOpen & {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    &Body {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      z-index: 10;
+
+      width: 100%;
+      max-height: 130px;
+      overflow: auto;
+
+      opacity: 0;
+      visibility: hidden;
+
+      transform: translate(0, 20px);
+
+      border: 1px solid rgba(black, 0.5);
+      border-radius: 0 0 6px 6px;
+
+      transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+
+      &::-webkit-scrollbar {
+        width: 0;
+      }
+
+      ._selectOpen & {
+        opacity: 1;
+        visibility: visible;
+
+        transform: translate(0, 0);
+      }
+
+      &__list {
+        background-color: var(--secondary-white-color-hsl);
+
+        border-top: none;
+
+        display: flex;
+        flex-direction: column;
+
+        overflow: hidden;
+      }
+
+      &__item {
+        font-size: 18px;
+        line-height: 30px;
+
+        cursor: pointer;
+
+        padding: 15px;
+
+        background-color: var(--secondary-white-color-hsl);
+
+        transition: background-color 0.3s ease;
+
+        @media screen and (min-width: 991.98px) {
+          &:hover {
+            background-color: hsl(var(--base-orange-color), 93%);
+          }
+        }
+
+        &:focus {
+          background-color: hsl(var(--base-orange-color), 93%);
+        }
+      }
+    }
+  }
+}
+
+._selectOpen {
+}

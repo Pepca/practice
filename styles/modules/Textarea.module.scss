@@ -1,0 +1,94 @@
+.textareaElement {
+  --textarea-padding-top: 10px;
+  --textarea-padding-left: 15px;
+  --border-bottom-height: 2px;
+  --font-size: 20px;
+  --label-threshold-top: 3px;
+
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  overflow-x: hidden;
+
+  &:after {
+    content: '';
+
+    position: absolute;
+    bottom: 2px;
+    left: -100%;
+    z-index: 2;
+
+    width: 100%;
+    height: 2px;
+
+    background-color: var(--orange-color-hsl);
+
+    transition: left 0.5s ease;
+  }
+
+  &._isTyping {
+    label {
+      opacity: 0;
+      visibility: hidden;
+
+      left: 50px;
+    }
+  }
+
+  &._isFocused {
+    &:after {
+      left: 0;
+    }
+  }
+
+  label {
+    position: absolute;
+    top: calc(var(--textarea-padding-top) + var(--label-threshold-top));
+    left: var(--textarea-padding-left);
+
+    pointer-events: none;
+
+    font-size: var(--font-size);
+
+    transition: left 0.15s ease, opacity 0.2s ease, visibility 0.2s ease;
+  }
+
+  textarea {
+    width: 100%;
+    height: 100%;
+
+    resize: none;
+    background-color: transparent;
+
+    padding-top: var(--textarea-padding-top);
+    padding-bottom: 10px;
+    padding-left: var(--textarea-padding-left);
+    padding-right: 15px;
+
+    border: none;
+
+    border-bottom: var(--border-bottom-height) solid rgba(black, 0.5);
+
+    font-family: var(--default-font-family);
+    font-size: var(--font-size);
+
+    &._lockScrollbar {
+      &::-webkit-scrollbar {
+        width: 0;
+      }
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+._isFocused {
+}
+._isTyping {
+}
+._lockScrollbar {
+}
