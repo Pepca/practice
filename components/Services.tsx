@@ -99,7 +99,7 @@ const Services = () => {
           </li>
           <li className={servicesItem}>
             <div className={servicesItemHead}>
-              <h2 className={servicesItemHead__title}>Обсулживание</h2>
+              <h2 className={servicesItemHead__title}>Обслуживание</h2>
               <div className={servicesItemHead__icon}>
                 <svg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'>
                   <path
