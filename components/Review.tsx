@@ -13,27 +13,27 @@ import QuoteIcon from '../public/images/quote.png'
 const REVIEWS_DATA = [
   {
     id: 0,
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-    name: 'DAVID JAMES',
-    rating: 4,
-  },
-  {
-    id: 1,
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-    name: 'DAVID JAMES',
+    text: 'Требовалась срочная консультация по новому принтеру: отказывался подключаться по USB к любому устройству в доме. Позвонила в студию по номеру телефона, объяснила причину, и мне сказали, что нужно провести диагностику. На следующий день просто принесла в студию, там его проверили и оказалось, что был поврежден кабель. Его быстро заменили и принтер работал отлично. Консультацией очень довольна, работа выполнена оперативно',
+    name: 'Анастасия Александровна',
     rating: 5,
   },
   {
+    id: 1,
+    text: 'Перестал включаться компьютер. Позвонила в студию, оставила заявку на ремонт. На следующий день приехали работники, и в течении часа компьютер уже работал. Однако не понравилось, что работники не задавали почти вопросов. Но в целом работой довольна.',
+    name: 'Ольга Викторовна',
+    rating: 4,
+  },
+  {
     id: 2,
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.',
-    name: 'DAVID JAMES',
-    rating: 3,
+    text: 'Хотел добавить оперативную память в компьютер, но не знал как найти еще одну такую же плашку, так как она уже была снята с производства. Приехал в офис, мне там сказали, что можно поставить любую другую, главное, чтобы частоты совпадали и помогли с выбором.',
+    name: 'Николай Викторович',
+    rating: 4,
   },
   {
     id: 3,
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-    name: 'DAVID JAMES',
-    rating: 2,
+    text: 'Старенький ноутбук уже отказывался даже включаться очень часть. Думала, что можно уже выкидывать его и собирать деньги на новый. Однако, не теряя надежды, решила отнести его в офис. Сказали, что постараются сделать все возможное. И через пару дней мне сообщили, что все готово. Моему удивлению не было предела, когда мой ноутбук, который недавно только запускался по 10 минут, уже включился с новой и абсолютно чистой системой. Все работает замечательно и очень шустро. Теперь пользовать ноутбуком одно удовольствие.',
+    name: 'Диана Андреева',
+    rating: 5,
   },
 ]
 

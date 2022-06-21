@@ -117,6 +117,8 @@
         font-family: var(--oswald-font-family);
         font-weight: 700;
         font-size: 40px;
+
+        text-transform: uppercase;
       }
 
       &__subtitle {
@@ -124,6 +126,8 @@
         font-weight: 300;
 
         color: hsl(0, 1%, 31%);
+
+        text-transform: uppercase;
       }
 
       &Text {

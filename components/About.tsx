@@ -46,13 +46,12 @@ const About = () => {
           <li className={setStaticClasses([aboutItem, _firstAboutPicture])}>
             <div className={aboutItem__inner}>
               <div className={aboutItemInfo}>
-                <div className={aboutItemInfo__title}>WE ARE</div>
-                <div className={aboutItemInfo__subtitle}>THE SQWD</div>
+                <div className={aboutItemInfo__title}>Кто мы?</div>
+                <div className={aboutItemInfo__subtitle}>IT STUDIO</div>
                 <div className={aboutItemInfoText}>
                   <ul className={aboutItemInfoText__list}>
                     <li className={aboutItemInfoText__paragraph}>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt.
+                      Наша цель - это достижение максимального качества в предоставляемых услугах.
                     </li>
                   </ul>
                 </div>
@@ -77,8 +76,7 @@ const About = () => {
                 <div className={aboutItemInfoText}>
                   <ul className={aboutItemInfoText__list}>
                     <li className={aboutItemInfoText__paragraph}>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt.
+                     Мы работаем уже более 3 лет, и все это время слово нашего клиента звучит как закон для нас.
                     </li>
                   </ul>
                 </div>

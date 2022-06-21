@@ -84,11 +84,7 @@ const Services = () => {
             </div>
             <div className={servicesItemBody} data-body>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt. Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit, sed do eiusmod tempor incididunt.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt.
+               В ремонте любого устройства самое главное - это не упустить мелкой детали. Наша команда готова предоставить большой спектр услуг в сфере ремонта ПК, принтеров, ноутбуков, телевизоров, телефонов и многой другой техники. В услугу входят замена деталей, чистка устройства, разборка и сборка. 
               </p>
             </div>
             <div className={servicesItemAction}>
@@ -118,9 +114,7 @@ const Services = () => {
             </div>
             <div className={servicesItemBody} data-body>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt. Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+                Многие цифровые устройства требуют бережного отношения как физически, так и программно. Мы предоставляем только лицензионное программное обеспечение, которое будет установленно и настроено на вашем устройстве под ваши желания и вкусы. Переустановка ОС, установка антивирусов, обновление софта, установка дополнительного ПО, настройка любого устройства - мы готовы предоставить все это именно вам.
               </p>
             </div>
             <div className={servicesItemAction}>
@@ -195,13 +189,7 @@ const Services = () => {
             </div>
             <div className={servicesItemBody} data-body>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt.Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt.Lorem ipsum dolor sit amet, consectetur adipiscing
-                elit, sed do eiusmod tempor incididunt.Lorem ipsum dolor sit
-                amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt.
+                Ни один вопрос нельзя оставить без ответа! Наш консультант готов вас выслушать и постараться помочь вам по номеру телефону, любой удобный мессенджер или же проконсультировать в очном формате. Заявку по любому вопросу можно оставить на нашем сайте или воспользоваться контактной информацией для связи с нами.
               </p>
             </div>
             <div className={servicesItemAction}>

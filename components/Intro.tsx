@@ -98,9 +98,9 @@ const Intro = () => {
     <section id='intro' className={intro}>
       <div className={setStaticClasses([intro__inner, '_container'])}>
         <div className={introInfo}>
-          <h1 className={introInfo__title}>WHERE GREAT IDEAS COME TO LIFE</h1>
+          <h1 className={introInfo__title}>Технологии вокруг нас</h1>
           <h4 className={introInfo__subtitle}>
-            Passionate creative studio helping startups grow their business!
+            Амбициозная IT studio, помогающая людям с технологичным прогрессом 
           </h4>
         </div>
         <div className={introDots}>
