@@ -26,7 +26,7 @@
   &__inner {
     position: relative;
 
-    padding: 55px 70px 70px 50px;
+    padding: 60px 65px 50px 65px;
 
     background-color: var(--white-color-hsl);
 
@@ -104,6 +104,12 @@
       align-items: center;
       justify-content: center;
 
+      &._sending {
+        button {
+          padding: 6px 50px 2px;
+        }
+      }
+
       button {
         cursor: pointer;
 
@@ -121,21 +127,25 @@
           border 0.3s ease;
 
         @media screen and (min-width: 991.98px) {
-          &:hover {
+          &:not(:disabled) {
+            &:hover {
+              border: 1px solid var(--orange-color-hsl);
+              background-color: var(--orange-color-hsl);
+
+              color: var(--white-color-hsl);
+            }
+          }
+        }
+
+        &:not(:disabled) {
+          &:focus {
+            outline: none;
+
             border: 1px solid var(--orange-color-hsl);
             background-color: var(--orange-color-hsl);
 
             color: var(--white-color-hsl);
           }
-        }
-
-        &:focus {
-          outline: none;
-
-          border: 1px solid var(--orange-color-hsl);
-          background-color: var(--orange-color-hsl);
-
-          color: var(--white-color-hsl);
         }
       }
     }
@@ -143,4 +153,7 @@
 }
 
 ._activePopup {
+}
+
+._sending {
 }

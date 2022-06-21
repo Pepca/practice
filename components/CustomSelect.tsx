@@ -9,6 +9,9 @@ import styles from '../styles/modules/CustomSelect.module.scss'
 interface ICustomSelectProps {
   label: string
   selectList: string[]
+  name: string
+  value: string
+  selectHandler: (targetText: string) => void
 }
 
 const {
@@ -24,9 +27,14 @@ const {
   _selectOpen,
 } = styles
 
-export const CustomSelect = ({ label, selectList }: ICustomSelectProps) => {
+export const CustomSelect = ({
+  label,
+  selectList,
+  name,
+  value,
+  selectHandler,
+}: ICustomSelectProps) => {
   const [isSelectOpen, setIsSelectOpen] = useState(false)
-  const [selectValue, setSelectValue] = useState('')
 
   const { popupState } = usePopupContext()
 
@@ -54,9 +62,9 @@ export const CustomSelect = ({ label, selectList }: ICustomSelectProps) => {
     if (targetText) {
       // @ts-ignore
       if (event.type === 'keydown' && event.code === 'Enter') {
-        setSelectValue(targetText)
+        selectHandler(targetText)
       } else if (event.type === 'click') {
-        setSelectValue(targetText)
+        selectHandler(targetText)
       }
     }
 
@@ -67,8 +75,6 @@ export const CustomSelect = ({ label, selectList }: ICustomSelectProps) => {
       setIsSelectOpen(false)
     }
   }
-
-  const blurHandler = () => setIsSelectOpen(false)
 
   useEffect(() => {
     if (popupState.issues === false || popupState.workWithUs === false) {
@@ -123,7 +129,7 @@ export const CustomSelect = ({ label, selectList }: ICustomSelectProps) => {
           tabIndex={0}
         >
           <div className={customSelectElementHead__value}>
-            {selectValue !== '' ? selectValue : 'Выбери...'}
+            {value !== '' ? value : 'Выбери...'}
           </div>
           <div className={customSelectElementHead__icon}>
             <svg viewBox='0 0 96 96' xmlns='http://www.w3.org/2000/svg'>
@@ -149,7 +155,7 @@ export const CustomSelect = ({ label, selectList }: ICustomSelectProps) => {
           </ul>
         </div>
       </div>
-      <input type='text' defaultValue={selectValue} />
+      <input type='text' defaultValue={value} name={name} />
     </div>
   )
 }

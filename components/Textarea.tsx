@@ -1,4 +1,11 @@
-import { ChangeEvent, useEffect, useRef, useState } from 'react'
+import {
+  ChangeEvent,
+  ChangeEventHandler,
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+} from 'react'
 
 import { setDynamicClasses } from '../lib/classes.lib'
 
@@ -9,12 +16,20 @@ interface ITexteareaProps {
   name: string
   label: string
   maxHeight?: number
+  value: string
+  changeHandler: ChangeEventHandler
 }
 
 const { textareaElement, _isTyping, _isFocused, _lockScrollbar } = styles
 
-export const Textarea = ({ id, name, label, maxHeight }: ITexteareaProps) => {
-  const [value, setValue] = useState('')
+export const Textarea = ({
+  id,
+  name,
+  label,
+  maxHeight,
+  value,
+  changeHandler,
+}: ITexteareaProps) => {
   const [isFocus, setIsFocus] = useState(false)
 
   const textareaRef = useRef<HTMLTextAreaElement>(null)
@@ -35,11 +50,6 @@ export const Textarea = ({ id, name, label, maxHeight }: ITexteareaProps) => {
     } else {
       eventTarget.classList.add(_lockScrollbar)
     }
-  }
-
-  const changeHandler = (event: ChangeEvent<HTMLTextAreaElement>) => {
-    autosizeTextarea(event.target)
-    setValue(event.target.value)
   }
 
   const focusHandler = () => {
@@ -71,7 +81,10 @@ export const Textarea = ({ id, name, label, maxHeight }: ITexteareaProps) => {
         name={name}
         id={id}
         value={value}
-        onChange={changeHandler}
+        onChange={(event) => {
+          autosizeTextarea(event.target)
+          changeHandler(event)
+        }}
         onFocus={focusHandler}
         onBlur={blurHandler}
       ></textarea>

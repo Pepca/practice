@@ -1,4 +1,10 @@
-import { ChangeEvent, HTMLInputTypeAttribute } from 'react'
+import {
+  ChangeEvent,
+  ChangeEventHandler,
+  HTMLInputTypeAttribute,
+  useCallback,
+  useEffect,
+} from 'react'
 
 import { useState, useRef } from 'react'
 import { IMaskInput } from 'react-imask'
@@ -12,25 +18,32 @@ interface IInputProps {
   type: HTMLInputTypeAttribute
   label: string
   name: string
+  value: string
+  changeHandler?: ChangeEventHandler
+  imaskInputHandler?: (value: string) => any
 }
 
 const { inputElement, _isFocused, _isTyping } = styles
 
-export const Input = ({ id, type, label, name }: IInputProps) => {
-  const [value, setValue] = useState('')
+export const Input = ({
+  id,
+  type,
+  label,
+  name,
+  value,
+  changeHandler,
+  imaskInputHandler,
+}: IInputProps) => {
   const [isFocus, setIsFocus] = useState(false)
 
   const ref = useRef(null)
-
-  const changeHandler = (event: ChangeEvent<HTMLInputElement>) => {
-    setValue(event.target.value)
-  }
 
   const focusHandler = () => {
     setIsFocus(true)
   }
 
   const blurHandler = () => {
+    console.log(value)
     if (value === '') setIsFocus(false)
   }
 
@@ -52,7 +65,7 @@ export const Input = ({ id, type, label, name }: IInputProps) => {
           name={name}
           value={value}
           // @ts-ignore
-          onAccept={(value) => setValue(value)}
+          onAccept={imaskInputHandler}
           onFocus={focusHandler}
           onBlur={blurHandler}
         />
