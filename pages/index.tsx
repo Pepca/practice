@@ -14,7 +14,7 @@ import { IssuesPopup } from '../components/Popup/IssuesPopup'
 
 const LandingPage: NextPage = () => {
   return (
-    <MainLayout title='Главная'>
+    <MainLayout title='IT STUDIO'>
       <WorkWithUsPopup />
       <IssuesPopup />
       <Intro />
