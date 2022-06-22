@@ -76,7 +76,7 @@ const About = () => {
                 <div className={aboutItemInfoText}>
                   <ul className={aboutItemInfoText__list}>
                     <li className={aboutItemInfoText__paragraph}>
-                     Мы работаем уже более 3 лет, и все это время слово нашего клиента звучит как закон для нас.
+                     Мы работаем уже более 10 лет, и все это время слово нашего клиента звучит как закон для нас.
                     </li>
                   </ul>
                 </div>
